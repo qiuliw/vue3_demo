@@ -1,7 +1,6 @@
 <template>
-    <h1>about</h1>
-    <div>
-    </div>
+    <h1>About</h1>
+    <div/>
     
 </template>
 <script setup>
