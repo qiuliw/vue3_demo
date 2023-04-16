@@ -5,7 +5,6 @@
     <RouterLink to="/about">about</RouterLink>
     |
     <RouterLink to="/login">login</RouterLink>
-    
   </div>
   <RouterView/>
 </template>
