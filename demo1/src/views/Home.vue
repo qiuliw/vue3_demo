@@ -1,9 +1,15 @@
 <template>
     <h1>Home</h1>
 
+    <div class="main">
+        main
+    </div>
+    <div class="container">
+        container
+    </div>
+    
     <A></A>
-    <p>----------</p>
-    <B/>
+    
 
 </template>
 
