@@ -1,19 +1,15 @@
 <template>
-    <div class="A">
-        <p>A组件</p>
-    </div>
+    <h6>A组件</h6>
+    {{ count }}
+    {{ name }}
 </template>
 
 
 <script setup>
+import { useCounterStore } from '../stores/counter'
+
+//解构
+const { count,name} = useCounterStore()
 
 
 </script>
-
-<style>
-.A{
-    height: 250px;
-    background-color: red;
-}
-
-</style>
