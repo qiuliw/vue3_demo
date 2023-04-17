@@ -9,6 +9,21 @@ export const useCounterStore = defineStore('counter', {
      }
   },
 
-  getters: {},
-  actions: {}
+  getters: {
+    changeNum(){
+        return this.count=1111
+    }
+  },
+  actions: {},
+  //持久化存储
+  persist:{
+    enabled:true,
+    strategies:[
+      {
+        key: 'my_user',
+        storage: localStorage,
+        paths:['name','age']
+      }
+    ]
+  }
 })

@@ -6,10 +6,17 @@
 
 
 <script setup>
+import { storeToRefs } from 'pinia';
 import { useCounterStore } from '../stores/counter'
 
 //解构
-const { count,name} = useCounterStore()
+const store =useCounterStore()
+const { count,name} = storeToRefs(store)
 
+//批量更新
+store.$patch(state=>{
+    state.count++;
+    state.name = '炸雷'
+})
 
 </script>
