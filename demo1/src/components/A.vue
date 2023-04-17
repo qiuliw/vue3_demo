@@ -1,6 +1,7 @@
 <template>
-    <p>A组件</p>
-
+    <div class="A">
+        <p>A组件</p>
+    </div>
 </template>
 
 
@@ -8,3 +9,11 @@
 
 
 </script>
+
+<style>
+.A{
+    height: 250px;
+    background-color: red;
+}
+
+</style>
