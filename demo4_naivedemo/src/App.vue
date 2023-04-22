@@ -1,7 +1,6 @@
 <template>
-  <Naiveui/>
+  <RouterView></RouterView>
 </template>
-
 <script setup>
 import Naiveui from './components/Naiveui.vue'
 
