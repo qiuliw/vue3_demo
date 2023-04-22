@@ -1,0 +1,22 @@
+{
+  "name": "demo3_naive",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "naive-ui": "^2.34.3",
+    "unplugin-auto-import": "^0.15.3",
+    "vfonts": "^0.0.3",
+    "vite": "^4.2.0"
+  }
+}
