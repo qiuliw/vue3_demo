@@ -20,23 +20,19 @@
     </n-card>    
 </template>
   
-  <script>
-  import { defineComponent, ref } from "vue";
-  import { CashOutline as CashIcon } from "@vicons/ionicons5";
-  
-  export default defineComponent({
-    components: {
-      CashIcon
-    },
-    setup() {
-      return {
-        avatar: ref(true),
-        header: ref(true),
-        headerExtra: ref(true),
-        description: ref(true),
-        footer: ref(true),
-        action: ref(true)
-      };
-    }
-  });
+<script setup>
+import { defineComponent, ref } from "vue";
+import { CashOutline as CashIcon } from "@vicons/ionicons5";
+
+const  avatar= ref(true)
+const  header=ref(true)
+const  headerExtra=ref(true)
+const  description=ref(true)
+const  footer= ref(true)
+const  action= ref(true)
+
+function changeNew(){
+  window.open("https://baike.baidu.com/item/%E5%90%B4%E6%89%BF%E6%81%A9/18713182?fromModule=lemma_search-box", "_blank");
+}
+
   </script>

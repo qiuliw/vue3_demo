@@ -45,12 +45,14 @@
   </style>
 
 <script setup>
+import { useMessage } from "naive-ui";
 
 const route =useRoute()
 const router = useRouter()
 
 function changeHLM(){
   router.push('/HLM');
+
 }
 function changeXYJ(){
   router.push('/XYJ');

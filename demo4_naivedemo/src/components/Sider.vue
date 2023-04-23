@@ -10,16 +10,20 @@
         </li>
     </ul>
     <!-- <n-card class="li"><a href="#/happy">一起去看<br>流星雨✨</a></n-card> -->
-    <n-button @click="changeDark">深色</n-button>
-    <n-button @click="changeLight">浅色</n-button>
-    <n-switch @click="changeWater">
-        <template #checked >
-            印水
-        </template>
-        <template #unchecked>
-        水印
-        </template>
-  </n-switch>
+    <n-card :bordered="false">
+        <n-button @click="changeTheme">{{ themeStr }}</n-button>
+    </n-card>
+
+    <n-card :bordered="false">
+        <n-switch @click="changeWater">
+            <template #checked >
+                印水
+            </template>
+            <template #unchecked>
+                水印
+            </template>
+        </n-switch>
+    </n-card>
 
 
 </template>
@@ -36,12 +40,16 @@ const { show }=storeToRefs(waterStore)
 //解构
 const themeStore =useThemeStore()
 const { theme,darkTheme } = storeToRefs(themeStore)
+const themeStr=ref('深色');
+function changeTheme(){
+    if(theme.value==null){
+        theme.value=darkTheme;
+        themeStr.value='浅色'
+    }else{
+        theme.value=ref(null);
+        themeStr.value='深色'
+    }
 
-function changeDark(){
-    theme.value=darkTheme;
-}
-function changeLight(){
-    theme.value=ref(null)
 }
 function changeWater(){
     if(show.value==true){
@@ -65,15 +73,20 @@ let str=ref([
 
 </script>
 
-<style>
+<style scoped>
 a{
-    text-decoration:none
+    text-decoration:none;
+    font-size:16px;
 }
 h2{
     margin: auto;
 }
 ul,li{
     padding:0;
+    margin:0;
+}
+.n-button{
+    padding: auto;
     margin:0;
 }
 </style>

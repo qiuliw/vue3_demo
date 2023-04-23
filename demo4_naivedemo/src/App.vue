@@ -40,11 +40,11 @@
 import Sider from './components/Sider.vue'
 import { storeToRefs } from 'pinia';
 import { useThemeStore } from './stores/themeStore'
-import { darkTheme } from "naive-ui";
 import WaterMark from './components/WaterMark.vue';
 //解构
 const store =useThemeStore()
 const { theme } = storeToRefs(store)
+
 
 </script>
 

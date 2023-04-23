@@ -1,5 +1,7 @@
 <template>
-    <n-card hoverable>
+    <n-card 
+    @click="changeNew"
+    hoverable>
         <n-thing>
         <template v-if="avatar" #avatar>
             <n-avatar>
@@ -19,23 +21,19 @@
     </n-card>    
 </template>
   
-  <script>
-  import { defineComponent, ref } from "vue";
-  import { CashOutline as CashIcon } from "@vicons/ionicons5";
-  
-  export default defineComponent({
-    components: {
-      CashIcon
-    },
-    setup() {
-      return {
-        avatar: ref(true),
-        header: ref(true),
-        headerExtra: ref(true),
-        description: ref(true),
-        footer: ref(true),
-        action: ref(true)
-      };
-    }
-  });
+<script setup>
+import { defineComponent, ref } from "vue";
+import { CashOutline as CashIcon } from "@vicons/ionicons5";
+
+const  avatar= ref(true)
+const  header=ref(true)
+const  headerExtra=ref(true)
+const  description=ref(true)
+const  footer= ref(true)
+const  action= ref(true)
+
+function changeNew(){
+  window.open("https://baike.baidu.com/item/%E7%BD%97%E8%B4%AF%E4%B8%AD/172206?fromModule=lemma_search-box", "_blank");
+}
+
   </script>
