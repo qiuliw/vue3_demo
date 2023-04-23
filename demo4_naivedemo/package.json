@@ -11,6 +11,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.21.4",
     "@vitejs/plugin-legacy": "^4.0.2",
+    "pinia": "^2.0.35",
     "terser": "^5.17.1",
     "unplugin-vue-components": "^0.24.1",
     "vicons": "^0.0.1",

@@ -30,7 +30,7 @@
 
     <n-card title="三国演义" @click="changeSGYY" hoverable>
       <template #cover>
-        <img src="../static/sgyy.webp" alt="三国演义">
+        <img src="../static/sgyy.webp" alt="三国演义" title="三国演义">
       </template>
       滚滚长江东逝水<br>
       浪花淘尽英雄

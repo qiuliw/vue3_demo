@@ -26,25 +26,14 @@
         <RouterView/>
 
       </n-layout>
-
     </n-layout>
   </n-config-provider>
-
-
-  <!-- 水印 -->
-  <WaterMark/>
 
 </template>
 
 <script setup>
 import Sider from './components/Sider.vue'
-import { storeToRefs } from 'pinia';
-import { useThemeStore } from './stores/themeStore'
-import { darkTheme } from "naive-ui";
-import WaterMark from './components/WaterMark.vue';
-//解构
-const store =useThemeStore()
-const { theme } = storeToRefs(store)
+
 
 </script>
 

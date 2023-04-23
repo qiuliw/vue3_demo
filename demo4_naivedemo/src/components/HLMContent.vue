@@ -8,6 +8,15 @@
     </div>
 </template>
 
-<style>
-
+<style scoped>
+p{
+    font-size: 16px;
+    text-indent:32px;
+    
+}
+h1{
+    font-family: "楷书";
+    color: #c93939;
+    text-align: center;
+}
 </style>

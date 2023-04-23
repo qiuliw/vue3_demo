@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div clas="HLM">
         <n-layout position="absolute" has-sider>
         <n-layout-sider class="centent"
         :native-scrollbar="false"
@@ -27,25 +27,16 @@
     
 </template>
 
-<style>
+<style scoped>
 .n-card{
-    float: left;
+    /* float: left; */
     max-width: 300px;
 }
 
   /* .n-layout-content {
   background: rgba(128, 128, 128, 0.4);
 } */
-p{
-    font-size: 16px;
-    text-indent:32px;
-    
-}
-h1{
-    font-family: "楷书";
-    color: #c93939;
-    text-align: center;
-}
+
 
 .centent{
     background-image: url("../static/HLMBack.jpg");

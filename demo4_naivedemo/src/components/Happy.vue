@@ -6,12 +6,12 @@
 <script setup>
 import { onMounted } from 'vue';
 
-let canvas=null;
-let ctx=null;
-let str=null;
-let Arr=null;
-let colors=null;
-let colorNum=null;
+var canvas=null;
+var ctx=null;
+var str=null;
+var Arr=null;
+var colors=null;
+var colorNum=null;
 
 onMounted(()=>{
     canvas = document.querySelector('#canvas');
