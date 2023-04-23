@@ -22,5 +22,24 @@ h1{
 </style>
 
 <script setup>
+const loadingBar = useLoadingBar()
+const disabledRef = ref(true)
 
+const message = useMessage();
+
+onMounted(()=>{
+    info();
+    disabledRef.value = true
+    loadingBar.error()
+})
+
+function info() {
+    message.info(
+    "你来的不巧了",
+    {
+        keepAliveOnHover: true,
+        showIcon: false,
+        duration: 1500
+    }
+)};
 </script>

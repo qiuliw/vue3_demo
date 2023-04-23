@@ -3,7 +3,7 @@
     <n-card>
         <RouterLink to="/"><h2>首页🏠</h2></RouterLink>
     </n-card>    
-    <n-card title="无序列⌚"/>
+    <n-card title="无序列⌚" @click="activate('right')"/>
     <ul style="list-style-type:none">
         <li v-for="{name,path} in str">
             <n-card class="li"><a :href="path">{{ name }}</a></n-card>
@@ -25,6 +25,17 @@
         </n-switch>
     </n-card>
 
+    <n-card>
+        <RouterLink to="/NewComponentTest">新组件测试</RouterLink>
+    </n-card>
+
+
+    <!-- 抽屉内容 -->
+    <n-drawer v-model:show="active" :width="502" :placement="placement">
+      <n-drawer-content title="无序列表">
+        无序列表是一个没有特定顺序的列表项的集合，也称为项目列表。<br>在无序列表中，各个列表之间属于并列关系，没有先后顺序之分，它们之间以一个项目符号来标记。使用无序列表标签ul的type属性（使用CSS的list-style来代替），用户可以指定出现在列表项前的项目符号的样式，主要有：disc（实心圆点）、circle（空心圆点）、square（实心方块）、none（无项目符号）。
+      </n-drawer-content>
+    </n-drawer>
 
 </template>
 
@@ -58,6 +69,15 @@ function changeWater(){
         show.value=ref(true)
     }
 }
+
+
+// 抽屉
+const active = ref(false);
+const placement = ref("right");
+const activate = (place) => {
+    active.value = true;
+    placement.value = place;
+};
 
 
 

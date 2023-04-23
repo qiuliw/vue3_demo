@@ -1,5 +1,6 @@
 <template>
-    <n-card hoverable>
+    <n-card @click="changeNew"
+    hoverable>
         <n-thing>
         <template v-if="avatar" #avatar>
             <n-avatar>

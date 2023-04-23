@@ -1,34 +1,15 @@
 <template>
-  <n-config-provider :theme="theme">
-        <!-- layout -->
-    <n-layout position="absolute" has-sider
-    style="height: 700px"
-    >
-      <!-- 边列表 -->
-      <!-- width宽度属性 -->
-      <n-layout-sider
-        content-style="padding: 24px;"
-        :native-scrollbar="false"
-        width="200px"
-        bordered
-      >
+  <n-loading-bar-provider>
+    <n-message-provider>
+      <n-config-provider :theme="theme"> 
+          <Layout/>
+      </n-config-provider>
+    </n-message-provider>
+  </n-loading-bar-provider>
+  
+    
+  
 
-      <Sider/>
-      
-
-      </n-layout-sider>
-
-      <!-- 展示区 -->
-      <n-layout content-style="padding: 24px;"
-        :native-scrollbar="false"
-      >
-      
-        <RouterView/>
-
-      </n-layout>
-
-    </n-layout>
-  </n-config-provider>
 
 
   <!-- 水印 -->
@@ -37,15 +18,13 @@
 </template>
 
 <script setup>
-import Sider from './components/Sider.vue'
 import { storeToRefs } from 'pinia';
 import { useThemeStore } from './stores/themeStore'
 import WaterMark from './components/WaterMark.vue';
+import Layout from './components/Layout.vue';
 //解构
 const store =useThemeStore()
 const { theme } = storeToRefs(store)
-
-
 </script>
 
 <style scoped>

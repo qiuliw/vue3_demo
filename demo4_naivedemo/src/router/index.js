@@ -14,6 +14,7 @@ const routes=[
     {path:'/SHZ',component:SHZ},
     {path:'/SGYY',component:SGYY},
     // {path:'/Happy',component:import("@/components/Happy.vue")}
+    {path:'/NewComponentTest',component:import("@/components/NewComponentTest.vue")}
 
 ];
 

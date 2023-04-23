@@ -33,4 +33,26 @@ p{
     
 }
 
+
 </style>
+
+
+<script setup>
+const message = useMessage();
+
+onMounted(()=>{
+    info()
+
+})
+
+function info() {
+    message.info(
+    "青山依旧在，几度夕阳红",
+    {
+        keepAliveOnHover: true,
+        showIcon: false,
+        duration: 1000
+    }
+)};
+
+</script>
