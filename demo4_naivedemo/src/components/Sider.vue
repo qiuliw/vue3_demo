@@ -17,23 +17,23 @@
     <n-card :bordered="false">
         <n-switch @click="changeWater">
             <template #checked >
-                印水
+                关水印
             </template>
             <template #unchecked>
-                水印
+                开水印
             </template>
         </n-switch>
     </n-card>
 
-    <n-card>
+    <!-- <n-card>
         <RouterLink to="/NewComponentTest">新组件测试</RouterLink>
-    </n-card>
+    </n-card> -->
 
 
     <!-- 抽屉内容 -->
     <n-drawer v-model:show="active" :width="502" :placement="placement">
       <n-drawer-content title="无序列表">
-        无序列表是一个没有特定顺序的列表项的集合，也称为项目列表。<br>在无序列表中，各个列表之间属于并列关系，没有先后顺序之分，它们之间以一个项目符号来标记。使用无序列表标签ul的type属性（使用CSS的list-style来代替），用户可以指定出现在列表项前的项目符号的样式，主要有：disc（实心圆点）、circle（空心圆点）、square（实心方块）、none（无项目符号）。
+        无序列表是一个没有特定顺序的列表项的集合，也称为项目列表。<br>在无序列表中，各个列表之间属于并列关系，没有先后顺序之分，它们之间以一个项目符号来标记。使用无序列表标签ul的type属性（使用CSS的list-style来代替），用户可以指定出现在列表项前的项目符号的样式，主要有：dis汉化🕸c（实心圆点）、circle（空心圆点）、square（实心方块）、none（无项目符号）。
       </n-drawer-content>
     </n-drawer>
 
@@ -97,6 +97,7 @@ let str=ref([
 a{
     text-decoration:none;
     font-size:16px;
+    color:#000000;
 }
 h2{
     margin: auto;

@@ -7,3 +7,4 @@ export const useWaterStore = defineStore('water', {
        }
     },
   })
+  

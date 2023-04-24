@@ -1,0 +1,25 @@
+{
+  "name": "demo5_naive",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "pinia": "^2.0.35",
+    "unplugin-vue-components": "^0.24.1",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vicons/ionicons5": "^0.12.0",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "naive-ui": "^2.34.3",
+    "unplugin-auto-import": "^0.15.3",
+    "vfonts": "^0.0.3",
+    "vite": "^4.3.0"
+  }
+}
