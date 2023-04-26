@@ -1,5 +1,19 @@
 <template>
     <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
+    <n-watermark
+    v-if="show"
+    content="武稞杭"
+    cross
+    fullscreen
+    :font-size="16"
+    :line-height="16"
+    :width="384"
+    :height="384"
+    :x-offset="12"
+    :y-offset="60"
+    :rotate="-15"
+  />
+  <n-switch v-model:value="show" />
 </template>
 
 <script setup>
@@ -10,6 +24,7 @@ BookOutline as BookIcon,
 HomeOutline as HomeIcon
 } from "@vicons/ionicons5";
 
+const show=ref(false)
 function renderIcon(icon) {
 return () => h(NIcon, null, { default: () => h(icon) });
 }
@@ -19,7 +34,7 @@ const menuOptions = [
     label: () => h(
     "a",
     {
-        href: "/home",
+        href: "#/home",
         target: "_self",
         rel: "noopenner noreferrer"
     },
@@ -32,7 +47,7 @@ const menuOptions = [
     label: () => h(
     "a",
     {
-        href: "/HLM",
+        href: "#/HLM",
         target: "_self",
         rel: "noopenner noreferrer"
     },
@@ -45,7 +60,7 @@ const menuOptions = [
     label: () => h(
     "a",
     {
-        href: "/XYJ",
+        href: "#/XYJ",
         target: "_self",
         rel: "noopenner noreferrer"
     },
@@ -58,7 +73,7 @@ const menuOptions = [
     label: () => h(
     "a",
     {
-        href: "/SHZ",
+        href: "#/SHZ",
         target: "_self",
         rel: "noopenner noreferrer"
     },
@@ -71,7 +86,7 @@ const menuOptions = [
     label: () => h(
     "a",
     {
-        href: "/SGYY",
+        href: "#/SGYY",
         target: "_self",
         rel: "noopenner noreferrer"
     },

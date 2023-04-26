@@ -32,3 +32,15 @@
     margin: auto;
   }
   </style>
+
+<script setup>
+import Picture from '@/Layout/Picture.vue';
+import { storeToRefs } from 'pinia';
+import { useComStore } from '@/store/comStore';
+const comStore=useComStore();
+const {com} =storeToRefs(comStore);
+onBeforeMount(()=>{
+    com.value=Picture
+})
+</script>
+

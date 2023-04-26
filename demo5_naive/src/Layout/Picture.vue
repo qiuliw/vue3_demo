@@ -65,7 +65,7 @@
     width: 28px;
     height: 28px;
     margin-right: 12px;
-    color: #fff;
+    color: #24996a;
     background-color: rgba(255, 255, 255, 0.1);
     border-width: 0;
     border-radius: 8px;

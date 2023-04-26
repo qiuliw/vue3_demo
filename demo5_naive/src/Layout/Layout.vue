@@ -5,7 +5,7 @@
             <Menu/>
         </n-layout-header>
         <n-layout has-sider position="absolute" style="top: 70px; bottom: 64px">
-            <n-layout-sider bordered content-style="padding: 24px;" :width="450">
+            <n-layout-sider bordered content-style="padding: 24px;" :width="450" :native-scrollbar="false">
             <component :is="com"/>
             </n-layout-sider>
             <n-layout content-style="padding: 24px;"  :native-scrollbar="false">
@@ -16,10 +16,11 @@
   </div>
 </template>
 <script setup>
+import { RouterView } from 'vue-router';
 import Picture from './Picture.vue';
-import Menu from '../Layout/Menu.vue';
+import Menu from '@/Layout/Menu.vue';
 import { storeToRefs } from 'pinia';
-import { useComStore } from '../store/comStore';
+import { useComStore } from '@/store/comStore';
 const comStore=useComStore();
 const {com} =storeToRefs(comStore);
 

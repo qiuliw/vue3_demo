@@ -1,18 +1,22 @@
-import { createRouter,createWebHistory } from "vue-router";
-import Home from '../views/Home.vue';
-
+import { createRouter,createWebHashHistory } from "vue-router";
+import Home from "@/views/Home.vue"
+// import Home from "@/views/Home.vue"
+import HLM from "@/views/HLM.vue"
+import XYJ from '@/views/XYJ.vue'
+import SHZ from '@/views/SHZ.vue'
+import SGYY from '@/views/SGYY.vue'
 const routes=[
-    {path:'/',redirect:'/home',},
-    {path:'/home',component:Home},
-    {path:'/HLM',component:import('../views/HLM.vue')},
-    {path:'/SGZ',component:import('../views/SHZ.vue')},
-    {path:'/SGYY',component:import('../views/SGYY.vue')},
-    {path:'/XYJ',component:import('../views/XYJ.vue')}
+    {path:'/',redirect:'/Home'},
+    {path:'/Home',component:Home},
+    {path:'/HLM',component:HLM},
+    {path:'/XYJ',component:XYJ},
+    {path:'/SHZ',component:SHZ},
+    {path:'/SGYY',component:SGYY},
 
 ];
 
 const router = createRouter({
-    history:createWebHistory(),
+    history:createWebHashHistory(),
     routes,
 })
 export default router;
