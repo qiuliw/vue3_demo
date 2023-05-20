@@ -23,6 +23,14 @@
     <swiper-slide>Slide 8</swiper-slide>
     <swiper-slide>Slide 9</swiper-slide>
   </swiper>
+
+  <!-- 背景 -->
+  <div class="g-bg">
+        <div class="g-polygon g-polygon-1"></div>
+        <div class="g-polygon g-polygon-2"></div>
+        <div class="g-polygon g-polygon-3"></div>
+  </div>
+  
 </template>
 <script setup>
 import Page1 from "./views/Page1.vue";

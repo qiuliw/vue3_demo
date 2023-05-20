@@ -66,7 +66,7 @@ watch(()=>props.activeIndex,(newVal,oldVal)=>{
 
 <style lang="less" scoped>
 .nav{
-    color: aliceblue;
+    color: rgb(90, 90, 90);
     font-family: "幼圆";
     font-size: 1.5rem;
     font-weight: bold;
@@ -85,7 +85,7 @@ watch(()=>props.activeIndex,(newVal,oldVal)=>{
             transition: all 0.3s;
             &:hover{
                 color: aquamarine;
-                text-shadow: 0 0 .5rem lightgreen;
+                text-shadow: 0 0 .5rem rgb(0, 59, 176);
                 transform: scale(1.2);
             }
         }
@@ -127,7 +127,7 @@ watch(()=>props.activeIndex,(newVal,oldVal)=>{
 }
 
 .current{
-    color: #a735a3;
+    color: #ff2b75;
     text-shadow: 0 0 .625rem pink;
 }
 
