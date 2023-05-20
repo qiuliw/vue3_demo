@@ -67,8 +67,9 @@ watch(()=>props.activeIndex,(newVal,oldVal)=>{
 <style lang="less" scoped>
 .nav{
     color: rgb(90, 90, 90);
-    font-family: "幼圆";
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "幼圆", Arial, sans-serif;
+    font-size: 1.6rem;
     font-weight: bold;
     position: fixed;
     z-index: 999;
