@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 内容板块 -->
+<div class="wrap"  id="wrap">
+    <div class="section"><span>01</span></div>
+    <div class="section"><span>02</span></div>
+    <div class="section"><span>03</span></div>
+    <div class="section"><span>04</span></div>
+    <div class="section"><span>05</span></div>
+</div>
+<!-- 内容板块 end-->
+
+<!-- 控制块，方便用户切换板块 -->
+<div class="ctrlBtns"  id="ctrlBtns">
+</div>
+<!-- 控制块 end -->
+
+</body>
+<script>
+let index = 0;
+let wrap = document.getElementById("wrap");
+let ctrlBtns = document.getElementById("ctrlBtns");
+let sections = wrap.getElementsByClassName("section");
+let secNum = sections.length ; // 页面板块个数
+let isScrolling = true;    // 滚动开关。true，允许滚动；false，不允许滚动
+/*
+* 开关的目的是，当页面正在滚动的时候，让滚动事件不再执行代码。
+* */
+// 防止浏览器刷新后，停留在当前位置。
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+
+/*
+* 工具方法：找兄弟标签
+* 参数：目标标签
+* 返回值：目标标签的兄弟标签数组
+* */
+function findSiblings(tag){
+    let parent = tag.parentNode;
+    let children = parent.children;
+    let siblings = [];
+    for(let i=0; i<=children.length-1; i++){
+        if( children[i] !== tag ){
+            siblings.push( children[i] );
+        }
+    }
+    return siblings;
+}
+
+/* 板块切换函数
+* 参数：window.innerHeight 窗口高度
+* index：当前显示的板块的索引值，全局变量
+* */
+function scrollWrap(wh,index){
+    // 板块切换
+    wrap.style.top = `-${wh*index}px`;
+    //  控制块切换
+    let btnIndex = ctrlBtns.children[index]; // index 对应的控制块
+    let sibilingsA = findSiblings(btnIndex);   // 它的兄弟们
+    // btnIndex 要添加 current，用以突出显示
+    btnIndex.classList.add("current");
+    // 兄弟们要去掉类 current
+    sibilingsA.forEach(function (v,i) {
+        v.classList.remove("current");
+    })
+}
+
+/*
+* 初始化函数：
+* 初始索引变量 index 为 0
+* 初始 wrap 的 top 值为 0
+* 生成控制块
+* 默认第一个 section 执行动画。
+* */
+function init(){
+    index = 0;
+    wrap.style.top  = 0;
+    // 生成控制块
+    for(let i=0; i <= secNum-1; i++){
+        let a = document.createElement("a");
+        a.href = "javascript:void(0)";
+        ctrlBtns.appendChild(a);
+    }
+    let ctrlHeight = ctrlBtns.offsetHeight ;
+    // 调整控制块垂直方向的位置。
+    ctrlBtns.style.marginTop = - ctrlHeight/2 + "px";
+    // 默认控制块第一个 a 为突出显示。
+    ctrlBtns.children[0].classList.add("current");
+    // 点击控制块，实现板块切换
+    for(let i=0; i <= secNum-1; i++){
+        ctrlBtns.children[i].addEventListener("click",function(){
+            index = i ;
+            // 切换板块
+            scrollWrap(window.innerHeight,index);
+        });
+    }
+    // 默认第一个标签执行动画
+    sections[index].classList.add("show");
+}
+function doScroll(e){
+    // 开关为 true：才执行滚动处理函数
+    if(isScrolling ){
+        // 进入开关，就关闭开关，防止多次滚动处理。
+        wrap.style.transition ="all 0.5s";
+        isScrolling = false;
+        let evt = e || window.event;
+        let wh = window.innerHeight ;
+        evt.preventDefault();   // 阻止浏览器默认事件
+        if( evt.deltaY>0 ){
+            console.info("页面向上滚动");
+            index++;
+            if( index >= secNum ){  // 当在最后一页的时候，还要滚动鼠标
+                index = secNum-1 ;
+                isScrolling = true ;
+                wrap.style.transition ="none"; // 去掉过渡效果，防止用户拖拉窗口，画面异常
+            }else{
+                scrollWrap(wh,index);
+            }
+        }else{
+            console.info("页面向下滚动");
+            index--;
+            if(index<0){   // 当在第一页的时候，用户还要滚动鼠标
+                index = 0; // 保持 index 为 0
+                isScrolling = true ;  // 允许滚动
+                wrap.style.transition ="none"; // 去掉过渡效果，防止用户拖拉窗口，画面异常
+            }else{
+                scrollWrap(wh,index);
+            }
+
+        }
+        console.info( evt.type,evt.deltaY, index);
+    }
+
+}
+
+window.addEventListener("wheel",doScroll,{ passive: false });
+// 让过渡动画执行完毕的时候，就开启开关，允许滚动。
+wrap.addEventListener("transitionend",function(){
+    isScrolling = true;   // 允许滚动
+    wrap.style.transition ="none"; // 去掉过渡效果，防止用户拖拉窗口，画面异常
+    // 对应板块显示动画
+    let secIndex = sections[index];  // 对应板块
+    let secSiblings = findSiblings(secIndex); // 它的兄弟们
+    secIndex.classList.add("show");
+    // 其它版权要去掉动画效果
+    for(let i = 0 ; i<=secSiblings.length-1; i++){
+        secSiblings[i].classList.remove("show");
+    }
+});
+
+window.addEventListener("resize",function(){
+    wrap.style.top = `-${index*window.innerHeight}px`;
+})
+
+init();  // 初始化
+</script>
+
+<style>
+body{
+    /* 屏蔽浏览器滚动条 */
+    overflow: hidden;
+}
+
+.wrap{
+    position: absolute;
+    width: 100%;
+}
+.section{
+    width: 100%;
+    height: 100vh;
+    font-size: 60px;
+}
+.section:nth-child(1){
+    background: #ffdddd;
+}
+.section:nth-child(2){
+    background: #ddffe4;
+}
+.section:nth-child(3){
+    background: #d7dcfd;
+}
+.section:nth-child(4){
+    background: #ffddf1;
+}
+.section:nth-child(5){
+    background: #ddf8ff;
+}
+
+.ctrlBtns{
+    position: fixed;
+    right:20px;
+    top:50%;
+    width: 20px;
+}
+.ctrlBtns a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    opacity: 0.8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.ctrlBtns a.current{
+    background: #f90;
+    opacity: 1;
+}
+
+/* 做一个小动画作为示例。可以根据项目需要设计更复杂的动画 */
+.section span{
+    transition: all 0.5s;
+    display: inline-block; /* 因为 inline 标签变形 transform 无效*/
+}
+.section.show  span{
+   transform: translateX(300px);
+}
+</style>
+
+</html>
