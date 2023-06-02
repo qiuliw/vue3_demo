@@ -147,12 +147,12 @@ li{
   clip-path: polygon(0 10%, 30% 0, 100% 40%, 70% 100%, 20% 90%);
 }
 
-.g-polygon-2 {
+/* .g-polygon-2 {
   top: 50%;
   left: 0%;
   background: #f6ff00;
   clip-path: polygon(10% 0, 100% 70%, 100% 100%, 20% 90%);
-}
+} */
 
 .g-polygon-3 {
   top: 20%;

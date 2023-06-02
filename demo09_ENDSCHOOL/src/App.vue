@@ -1,6 +1,7 @@
 <template>
-  <Nav :activeIndex="activeIndex"/>
+  <Nav :activeIndex="activeIndex" @slideToMiddle="goTo"/>
   <swiper
+    @swiper="onSwiper"
     :direction="'vertical'"
     :slidesPerView="1"
     :spaceBetween="0"
@@ -30,6 +31,7 @@
         <div class="g-polygon g-polygon-2"></div>
         <div class="g-polygon g-polygon-3"></div>
   </div>
+  <!-- 背景 end -->
   
 </template>
 <script setup>
@@ -43,16 +45,24 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { Mousewheel, Pagination } from 'swiper';
 import './style.css';
-// import 'swiper/css/pagination';//分页小点
 
 const modules=[Mousewheel];
 
-// 当前页与tab随动的数值
+// 导航随动
 let activeIndex=ref(0);
-
 const onSlideChange=(swiper)=>{
   activeIndex.value=swiper.activeIndex;
 }
+
+// 导航切换
+let useSwiper=null;
+const onSwiper=(swiper)=>{
+  useSwiper=swiper;
+}
+const goTo=(index)=>{
+  useSwiper.slideTo(index);
+}
+
 
 
 </script>

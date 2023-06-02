@@ -11,8 +11,6 @@
         width: 1500px;
         height: 840px;
         margin: 10px auto;
-        /* 图片从百度上复制的 */            
-        background:url("../assets/1.jpg");
         background-size: 100% 100%;
         display: flex;
         justify-content: center;

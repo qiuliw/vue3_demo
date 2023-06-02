@@ -1,6 +1,6 @@
 <template>
     <div id="page1">
-
+        show页
     </div>
     
 </template>

@@ -2,7 +2,7 @@
     <div class="nav">
 
         <ul>
-            <li :class=tabClassList[index]   v-for="(item,index) in tabNameList" >{{ item }}</li>
+            <li :class=tabClassList[index] @click="goTo(index)"   v-for="(item,index) in tabNameList" >{{ item }}</li>
         </ul>
 
         <div class="music">
@@ -44,7 +44,7 @@ const playMusic=()=>{
         }
 }
 // tabList
-const tabNameList=ref(["首页","红楼","西游","水浒","三国"]);
+const tabNameList=ref(["首页","红楼","西尤","水浒","三国"]);
 // 记录li数组样式状态
 const tabClassList=ref(['current']);
 // props swiper变化
@@ -60,17 +60,26 @@ watch(()=>props.activeIndex,(newVal,oldVal)=>{
     tabClassList.value[oldVal]=''
     tabClassList.value[newVal]='current';
 })
+
+// 调用父组件改变页
+const emits =defineEmits(["goTo"])
+function goTo(index){
+    emits('slideToMiddle',index)
+}
+
+
 </script>
 
 
 
 <style lang="less" scoped>
 .nav{
-    color: rgb(90, 90, 90);
+    
+    color:gray;
     font-weight: bold;
-    font-family: "幼圆", Arial, sans-serif;
+    font-family:  "幼圆",Arial, sans-serif;
     font-size: 1.6rem;
-    font-weight: bold;
+    // font-weight: bold;
     position: fixed;
     z-index: 999;
     width: 100%;
@@ -80,10 +89,10 @@ watch(()=>props.activeIndex,(newVal,oldVal)=>{
 
     ul{
         flex:1;
-
         li{
             margin-left: 1rem;
             transition: all 0.3s;
+
             &:hover{
                 color: aquamarine;
                 text-shadow: 0 0 .5rem rgb(0, 59, 176);
@@ -100,7 +109,7 @@ watch(()=>props.activeIndex,(newVal,oldVal)=>{
             display: none;
         }
         &:hover{
-            color: pink;
+            color: lightskyblue;
             transform: scale(1.2);
         }
     }
@@ -109,7 +118,7 @@ watch(()=>props.activeIndex,(newVal,oldVal)=>{
 
 
 .run{
-    color: pink;
+    color: lightskyblue;
     animation: ro 5s infinite ;
     animation-timing-function:linear;
 }
@@ -128,8 +137,7 @@ watch(()=>props.activeIndex,(newVal,oldVal)=>{
 }
 
 .current{
-    color: #ff2b75;
-    text-shadow: 0 0 .625rem pink;
+    color: lightsalmon;
 }
 
 </style>
