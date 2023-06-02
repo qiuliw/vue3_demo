@@ -5,44 +5,50 @@
             <li :class=tabClassList[index] @click="goTo(index)"   v-for="(item,index) in tabNameList" >{{ item }}</li>
         </ul>
 
+    <!--废弃
         <div class="music">
-                <!-- 音频播放控件 -->
-                <div :class="textClass" @click="playMusic">{{ musicState }}</div>
-                <!-- ::::VUE3 废弃tmd  !!!!!----此处的ref属性，可以很方便的在vue组件中通过 this.$refs.audio获取该dom元素
-                      需要用 refName=ref(null)调用 
-                    对单个dom的操作只能使用声明并绑定的形式
-                    -->
-                <audio
-                ref="audio"
-                autoplay="autoplay" 
-                controls="controls"
-                preload="auto"
-                >
-                <source src="../assets/que.mp3"/>
-                </audio>
-            </div>
+            音频播放控件
+            <div :class="textClass" @click="playMusic">{{ musicState }}</div>
+                ::::VUE3 废弃tmd  !!!!!----此处的ref属性，可以很方便的在vue组件中通过 this.$refs.audio获取该dom元素
+                    需要用 refName=ref(null)调用 
+                对单个dom的操作只能使用声明并绑定的形式
+                
+            <audio
+            ref="audio"
+            autoplay="autoplay" 
+            controls="controls"
+            preload="auto"
+            >
+            <source src="../assets/que.mp3"/>
+            </audio>
         </div>
+        
+    -->
+    </div>
 </template>
 
 
 <script setup>
 import {ref} from "vue"
-// music
-var musicState=ref("播放音乐")
-const audio=ref(null);
-const textClass=ref("text");
-const playMusic=()=>{
-    if(musicState.value=="播放音乐"){
-            audio.value.play();
-            musicState.value="停止播放";
-            textClass.value="text run" 
+// music 废弃
+// var musicState=ref("播放音乐")
+// const audio=ref(null);
+// const textClass=ref("text");
+// const playMusic=()=>{
+//     if(musicState.value=="播放音乐"){
+//             audio.value.play();
+//             musicState.value="停止播放";
+//             textClass.value="text run" 
 
-        }else{
-            audio.value.pause();
-            musicState.value="播放音乐";
-            textClass.value="text"
-        }
-}
+//         }else{
+//             audio.value.pause();
+//             musicState.value="播放音乐";
+//             textClass.value="text"
+//         }
+// }
+
+
+
 // tabList
 const tabNameList=ref(["首页","红楼","西尤","水浒","三国"]);
 // 记录li数组样式状态
@@ -75,7 +81,7 @@ function goTo(index){
 <style lang="less" scoped>
 .nav{
     
-    color:gray;
+    color:white;
     font-weight: bold;
     font-family:  "幼圆",Arial, sans-serif;
     font-size: 1.6rem;
@@ -91,12 +97,10 @@ function goTo(index){
         flex:1;
         li{
             margin-left: 1rem;
-            transition: all 0.3s;
+            transition: all 0.1s;
 
             &:hover{
-                color: aquamarine;
-                text-shadow: 0 0 .5rem rgb(0, 59, 176);
-                transform: scale(1.2);
+                color: #b0b0b0;
             }
         }
     }
@@ -118,7 +122,6 @@ function goTo(index){
 
 
 .run{
-    color: lightskyblue;
     animation: ro 5s infinite ;
     animation-timing-function:linear;
 }
@@ -137,7 +140,7 @@ function goTo(index){
 }
 
 .current{
-    color: lightsalmon;
+    color: #737373;
 }
 
 </style>

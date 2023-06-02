@@ -78,40 +78,14 @@ body {
 }
 
 body {
-  background: #eee;
+  background-image: linear-gradient(0deg,
+            rgba(247, 247, 247, 1) 23.8%,
+            #0decfc);
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
   margin: 0;
   padding: 0;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-  /* my set */
-  /* 椭圆渐变 */
-  /* background-image: repeating-radial-gradient(circle at 20% 40%,#eea2a2 20px, #57c6e1 20px, #b49fda 40px, #7ac5d8 40px, #b49fda 60px, #4F9C9C 60px, #57c6e1 80px, #99CCCC 80px, #eea2a2 100px); */
-  /* filter: blur(10px); */
-  /* transform: rotate(90deg); */
-  background-color: rgba(0,0,0,0);
-
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  /* background: #fff; */
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* my set */
-  overflow: hidden;
-  /* 分页透明 */
-  background-color: rgba(0,0,0,0);
 }
 
 img {
@@ -125,48 +99,3 @@ li{
   display: inline-block;
 }
 
-/* 背景 start */
-.g-bg{
-  z-index: -999;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.g-polygon {
-  height: 60%;
-  width: 70%;
-  position: absolute;
-  opacity: .5;
-}
-.g-polygon-1 {
-  top: 0%;
-  left: 0%;
-  background: #00ff4c;
-  clip-path: polygon(0 10%, 30% 0, 100% 40%, 70% 100%, 20% 90%);
-}
-
-/* .g-polygon-2 {
-  top: 50%;
-  left: 0%;
-  background: #f6ff00;
-  clip-path: polygon(10% 0, 100% 70%, 100% 100%, 20% 90%);
-} */
-
-.g-polygon-3 {
-  top: 20%;
-  left: 50%;
-  background: rgb(255, 98, 0);
-  clip-path: polygon(80% 0, 100% 70%, 100% 100%, 20% 90%);
-}
-
-.g-bg::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; bottom: 0; right: 0;
-  backdrop-filter: blur(130px);
-  z-index: 1;
-}
-
-/* 背景end */

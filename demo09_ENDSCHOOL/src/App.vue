@@ -25,13 +25,6 @@
     <swiper-slide>Slide 9</swiper-slide>
   </swiper>
 
-  <!-- 背景 -->
-  <div class="g-bg">
-        <div class="g-polygon g-polygon-1"></div>
-        <div class="g-polygon g-polygon-2"></div>
-        <div class="g-polygon g-polygon-3"></div>
-  </div>
-  <!-- 背景 end -->
   
 </template>
 <script setup>
@@ -67,3 +60,25 @@ const goTo=(index)=>{
 
 </script>
 
+<style>
+.swiper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0);
+
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* my set */
+  overflow: hidden;
+  /* 分页透明 */
+  background-color: rgba(0,0,0,0);
+}
+
+</style>

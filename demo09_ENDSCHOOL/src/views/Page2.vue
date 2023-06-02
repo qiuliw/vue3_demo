@@ -1,33 +1,8 @@
 <template>
-    <div id="box">
-    <div id="conent">
-        <h2>这是毛玻璃效果</h2>
+    <div class="page2">
+        page2
     </div>
-</div>
+    
 </template>
-
-<style>
-    #box{
-        width: 1500px;
-        height: 840px;
-        margin: 10px auto;
-        background-size: 100% 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #conent{
-        width: 50%;
-        height: 50%;
-        /* background-color: rgba(255,255,255,.1);
-        background-color: transparent; */
-        background-size: 100% 100%;
-        backdrop-filter: blur(15px);
-        box-shadow: 0 0 10px rgb(93, 93, 93);
-        border-radius: 15px;
-    }
-    h2{
-        text-align: center;
-        color: white;
-    }
+<style lang="less" scoped>
 </style>
