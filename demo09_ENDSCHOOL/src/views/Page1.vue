@@ -1,6 +1,6 @@
 <template>
-    <!-- 提示 -->
-    <div class="msg"><h1>请点击播放<br>开始欣赏我们的表演</h1></div>
+    <!-- 提示
+    <div class="msg"><h1>请点击播放<br>开始欣赏我们的表演</h1></div> -->
 
     <!-- 音乐播放器 -->
     <div class="player-warp">
@@ -65,40 +65,31 @@
 </template>
 
 <style lang="less">
-// 提示
-.msg{
-    position: absolute;
-    font-size: 30px;font-weight: bolder;color: white;
-    top: 30%;left: 50%;transform: translate(-50%,-50%);//居中
-    h1{
-        text-shadow: 0px 5px 5px rgba(8, 182, 212, 0.822);
-    }
-}
 // 音乐播放器
 .player-warp{
     position: relative;
-    margin-top:90px ;
-
+    margin-top: 6.5rem;
     // 歌曲信息面板
     div.play-info{
         width: 90%;
+        height: 110%;
         position: absolute;
         top:0%;// -100%;
         left: 50%;transform: translateX(-50%);//水平居中
         padding: 10px;z-index: -1;
-        background: rgba(255,255,255,0.55);box-shadow: 0 20px 20px 0 rgba(8, 182, 212,0.37);backdrop-filter: blur(3.5px);border-radius: 10px;//毛玻璃
+        background: rgba(255,255,255,0.55);box-shadow: 0 1.25rem 1.25rem 0 rgba(8, 182, 212,0.37);backdrop-filter: blur(3.5px);border-radius: 10px;//毛玻璃
         display: flex;justify-content:flex-end;
         opacity: 0;
         transition:all 1s ease;
 
         .info{
-            width:60%;font-size: 10px;
+            width:63%;font-size: .7rem;
 
             .name{
-                font-size: 14px;font-weight:bold;
+                font-size: 1rem;font-weight:bold;
             }
             .singer-album{
-                color: #757474;line-height:20px;
+                color: #757474;line-height:1.25rem;
             }
             //进度
             .music_progress{
@@ -125,14 +116,14 @@
 
     // 音乐控制器
     .play-control{
-        width: 360px;height: 80px;padding: 20px 30px;
+        width: 400px;height: 100px;padding: 20px 30px;
         background-color: #fff;border-radius: 15px;
         box-shadow: 0 20px 20px 0 rgba(8, 182, 212, 0.822);
         display: flex;justify-content: space-between;
         z-index: 10;
         //封面唱片
         .cover{
-            width: 100px;height: 100px;border-radius:50%;background-color: #fff;margin-top: -60px;padding:6px;position: relative;
+            width: 6.5rem;height: 6.5rem;border-radius:50%;background-color: #fff;margin-top: -60px;padding:6px;position: relative;
             animation: zhuan 5s infinite linear;
             animation-play-state: paused;
 
@@ -220,7 +211,7 @@
             .music-list{
                 list-style: none;
                 li{
-                    padding: 10px 0;border-radius: 3px;
+                    padding: 10px 5px;border-radius: 3px;
                     border-bottom: 1px solid rgb(186,182,182);
                     display: flex; justify-content: space-between;align-items: center;
                     transition: all 0.1s 0s;
@@ -419,7 +410,5 @@ const openMusicList=()=>{
 //关闭
 const closeMusicList=()=>{
     modalDom.value.style='display:none'
-
 }
-
 </script>
