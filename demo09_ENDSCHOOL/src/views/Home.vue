@@ -68,14 +68,14 @@ body{
 
 // swiper
 .swiper {
-width: 100vw;height: 100vh;background-color: rgba(0,0,0,0);
-.swiper-slide {
-    display: flex;justify-content: center;align-items: center;
-    /* 防止分页干扰 */
-    overflow: hidden;
-    /* 分页透明 */
-    // background-color: rgba(0,0,0,0);
-}
+  width: 100vw;height: 100vh;background-color: rgba(0,0,0,0);
+  .swiper-slide {
+      display: flex;justify-content: center;align-items: center;
+      /* 防止分页干扰 */
+      overflow: hidden;
+      /* 分页透明 */
+      // background-color: rgba(0,0,0,0);
+  }
 }
 
   </style>

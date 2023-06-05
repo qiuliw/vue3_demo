@@ -2,7 +2,7 @@
     <div class="nav">
 
         <ul>
-            <li :class=tabCurrentList[index] @click="goTo(index)"   v-for="(item,index) in tabNameList" >{{ item }}</li>
+            <li :class=tabCurrentList[index] @click="goTo(index)"   v-for="(item,index) in tabNameList" ><span>{{ item }}</span></li>
         </ul>
 
     </div>
@@ -43,7 +43,7 @@ function goTo(index){
 <style lang="less" scoped>
 .nav{
     font-family:Arial, sans-serif;font-size: 1.6rem;
-    position: fixed;z-index:10;width: 100%;height: 2.5rem;
+    position: fixed;z-index: 2;width: 70%;height: 2.5rem;
     display: flex;align-items: center;
     ul{
         flex:1;
@@ -54,19 +54,35 @@ function goTo(index){
             padding: 0 9px;
             color: white;
             transition: all 0.2s;
-            z-index: 0;
             &:hover{
                 border-radius: 10px;
-                background-color: #ffffff;
+                background-color: white;
                 color: rgb(88, 219, 255);
                 cursor: pointer;
             }
+            &:hover span{
+                animation: 0.2s jump;
+            }
+
+            span{
+                display: inline-block;
+            }
+            @keyframes jump {
+                50%{
+                    transform: translateY(-30%);
+                }
+                100%{
+                    transform:translate(0);
+                }
+            }
         }
+        //当前li的样式
+        .current{
+            color: rgb(66, 66, 66);
+        } 
     }
 }
-//当前li的样式
-.current{
-    color: white;
-}
+
+
 
 </style>
