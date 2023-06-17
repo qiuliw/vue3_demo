@@ -1,31 +1,31 @@
 <template>
     <div class="shell">
         <div class="box">
-            <img src="../../public/imgs/0.jpg">
-            <span>Image</span>
+            <img src="../../public/imgs/a-1.jpg">
+            <span>棒打香橙</span>
         </div>
         <div class="box">
-            <img src="../../public/imgs/2.jpg">
-            <span>Video</span>
+            <img src="../../public/imgs/a-2.jpg">
+            <span>芋圆葡萄</span>
         </div>
         <div class="box">
-            <img src="../../public/imgs/3.jpg">
-            <span>File</span>
+            <img src="../../public/imgs/a-3.jpg">
+            <span>草莓伯伯</span>
         </div>
         <div class="box">
-            <img src="../../public/imgs/4.jpg">
-            <span>Music</span>
+            <img src="../../public/imgs/a-1.jpg">
+            <span>香橙棒打</span>
         </div>
         <div class="box">
-            <img src="../../public/imgs/1.jpg">
-            <span>tyric</span>
+            <img src="../../public/imgs/a-2.jpg">
+            <span>葡萄余元</span>
         </div>
     </div>
 </template>
 
 
 
-<style lang="less" scoped>
+<style scoped>
 *{
     padding:0;
     margin:0;

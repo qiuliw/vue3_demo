@@ -1,6 +1,4 @@
 <template>
-    <!-- 提示
-    <div class="msg"><h1>请点击播放<br>开始欣赏我们的表演</h1></div> -->
 
     <!-- 音乐播放器 -->
     <div class="player-warp">
@@ -16,7 +14,7 @@
                         <span class="current-time">{{currentTimeStr}}</span>
                         <div class="time">{{totalTimeStr}}</div>
                     </div>
-                    <div class="music_progress_bar">
+                    <div class="music_progress_bar" ref="progressBar" @click="progressClick()">
                         <div class="music_progress_line" ref="lineDom"></div>
                     </div>
                 </div>
@@ -43,7 +41,7 @@
     </div>
 
     <!-- 音乐 -->
-    <audio ref="audio" @timeupdate="updateTime" :src=musicMsg.audio_url></audio>
+    <audio ref="audio" @ended="next()" @timeupdate="updateTime" :src=musicMsg.audio_url></audio>
 
     <!-- 模态框 -->
     <div class="modal" ref="modalDom">
@@ -68,7 +66,7 @@
 // 音乐播放器
 .player-warp{
     position: relative;
-    margin-top: 6.5rem;
+    margin-top: 3rem;
     // 歌曲信息面板
     div.play-info{
         width: 90%;
@@ -177,10 +175,12 @@
     width:100%;height: 100%;
     background-color: rgba(0,0,0,0.5);
     position:absolute;top:0;left: 0;
-    // display: none;
+    display: none;
     // 侧边
     .modal-box{
         width: 30%;height: 100%;padding: 20px;background-color: #fff;position: absolute;
+        padding-top: 50px;
+
         top:0;right: 0;
     
 
@@ -241,7 +241,44 @@ import '../assets/css/font-awesome.min.css' //引入图标
 import axios from 'axios'
 import { useDateFormat } from '@vueuse/core'
 // 保存音乐列表信息
-var musicList=[];
+var musicList=[
+  {
+    "name": "我记得",
+    "audio_url": "./audios/我记得.mp3",
+    "singer": "赵雷",
+    "album": "少年",
+    "cover": "./imgs/0.jpg",
+    "time": "05:29"
+  },
+  {
+    "name": "成都",
+    "audio_url": "./audios/成都.mp3",
+    "singer": "赵雷",
+    "album": "成都",
+    "cover": "./imgs/1.jpg"
+  },
+  {
+    "name": "南方姑娘",
+    "audio_url": "./audios/南方姑娘.mp3",
+    "singer": "赵雷",
+    "album": "赵小雷",
+    "cover": "./imgs/2.jpg"
+  },
+  {
+    "name": "阴天快乐",
+    "audio_url": "./audios/阴天快乐.mp3",
+    "singer": "陈奕迅",
+    "album": "Rice&Shine",
+    "cover": "./imgs/3.jpg"
+  },
+  {
+    "name": "爱情转移",
+    "audio_url": "./audios/爱情转移.mp3",
+    "singer": "陈奕迅",
+    "album": "认了吧",
+    "cover": "./imgs/4.jpg"
+  }
+];
 // 当前播放哪一首歌曲
 var currentIndex = ref(0);
 // 模态框列表当前播放的歌曲样式
@@ -312,7 +349,7 @@ const stopMusicOther=()=>{
 
 // 监听currentIndex 修改modal列表
 watch(()=>currentIndex.value,(newVal,oldVal)=>{//监听父组件swiper索引变化，修改样式数组
-    // 颗粒化清除样式
+    // 细粒化清除样式
     playing.value[oldVal]=''
     modalIconClass.value[oldVal]='';
     pushStyle();
@@ -371,18 +408,19 @@ const updateTime=(e)=>{
     currentTimeStr.value=format(e.target.currentTime);
     let persent = e.target.currentTime / totalTime.value * 100;
     lineDom.value.style="width:"+persent+"%";
-    console.log(persent)
 }
+// 歌曲播放结束
 
 onMounted(()=>{
 
-    // 请求本地数据,加载音乐列表信息
-    axios.get('/json/music.json',{responseType:'json'}).then(res =>{
-        musicList=res.data;
-        // 注意要在异步的回调中进行，保证数组中有所需值
-        render(musicList[currentIndex.value]);
-    })
-    // play_info=document.querySelector('.play-info');
+    // 请求本地数据,加载音乐列表信息 无法跨域
+    // axios.get('/json/music.json',{responseType:'json'}).then(res =>{
+    //     musicList=res.data;
+    //     // 注意要在异步的回调中进行，保证数组中有所需值
+    //     render(musicList[currentIndex.value]);
+    // })
+    render(musicList[currentIndex.value]);
+
 
 })
 
@@ -405,10 +443,21 @@ const modalDom=ref();
 const modalIconClass=ref([]);
 // 打开模态框
 const openMusicList=()=>{
-    modalDom.value.style='display:'
+    modalDom.value.style='display:block'
 }
 //关闭
 const closeMusicList=()=>{
-    modalDom.value.style='display:none'
+    modalDom.value.style='display:none';
+}
+
+
+const progressBar=ref();
+// 点击进度条
+const progressClick=(e)=>{
+    const rect =progressBar.value.getBoundingClientRect();
+    let persent = (e.domEvent.pageX - rect.left)/rect.width;
+    lineDom.value.style='width:'+persent+"%";
+    audio.value.currentTime = persent * totalTime /100;
+    console.log(persent);
 }
 </script>

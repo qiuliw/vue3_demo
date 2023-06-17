@@ -1,6 +1,8 @@
 <template>
     <!-- 导航栏 -->
     <Nav :activeIndex="activeIndex" @slideToMiddle="goTo"/>
+    <!-- 返回按钮 -->
+    <Return @slideToMiddle="goTo"/>
     <!-- swiper -->
     <swiper
       @swiper="onSwiper"
@@ -18,13 +20,10 @@
     >
       <swiper-slide><Page1/></swiper-slide>
       <swiper-slide><Page2/></swiper-slide>
-      <swiper-slide>Slide 3</swiper-slide>
-      <swiper-slide>Slide 4</swiper-slide>
-      <swiper-slide>Slide 5</swiper-slide>
-      <swiper-slide>Slide 6</swiper-slide>
-      <swiper-slide>Slide 7</swiper-slide>
-      <swiper-slide>Slide 8</swiper-slide>
-      <swiper-slide>Slide 9</swiper-slide>
+      <swiper-slide><Page3/></swiper-slide>
+      <swiper-slide><Page4/></swiper-slide>
+      <swiper-slide><Page5/></swiper-slide>
+      <swiper-slide><Page6/></swiper-slide>
     </swiper>
   
     
@@ -32,7 +31,12 @@
   <script setup>
   import Page1 from "./Page1.vue";
   import Page2 from "./Page2.vue";
+  import Page3 from "./Page3.vue";
+  import Page4 from "./Page4.vue";
+  import Page5 from "./Page5.vue";
+  import Page6 from "./Page6.vue";
   import Nav from "../components/Nav.vue"
+import Return from "../components/Return.vue";
   
   import { ref } from "vue"
   // 引入swiper基础组件样式
