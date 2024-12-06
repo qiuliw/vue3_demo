@@ -10,7 +10,6 @@ import { fileURLToPath, URL } from 'node:url';
 export default defineConfig({
   plugins: [
     vue(),
-    vueDevTools(),
     AutoImport({
       imports: [
         'vue',
