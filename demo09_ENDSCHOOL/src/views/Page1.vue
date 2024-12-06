@@ -47,7 +47,7 @@
     <div class="modal" ref="modalDom">
         <div class="modal-box">
             <div class="modal-box-top">
-                <div class="modal-title">音乐列表</div>
+                <div class="modal-title">安魂曲列表</div>
                 <div class="modal-close" @click="closeMusicList"><div class="close_icon">✖</div></div>
             </div>
             <div class="modal-wrapper">

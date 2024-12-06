@@ -42,7 +42,7 @@ import { ref } from "vue"
 // 引入swiper基础组件样式
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import { Mousewheel, Pagination } from 'swiper/modules';
+import { Mousewheel } from 'swiper/modules';
 
 
 //---------- swiper ----------------
@@ -66,8 +66,8 @@ const goTo=(index)=>{
 <style lang="less">
 body{
 background-image: linear-gradient(0deg,
-        rgba(247, 247, 247, 1) 23.8%,
-        #0decfc);
+        rgb(105, 105, 105) 23.8%,
+        #292929);
 }
 
 // swiper

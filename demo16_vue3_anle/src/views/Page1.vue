@@ -115,8 +115,8 @@
     // 音乐控制器
     .play-control{
         width: 400px;height: 100px;padding: 20px 30px;
-        background-color: #fff;border-radius: 15px;
-        box-shadow: 0 20px 20px 0 rgba(8, 182, 212, 0.822);
+        background-color: #d5d5d5;border-radius: 15px;
+        box-shadow: 0 20px 20px 0 rgba(81, 128, 162, 0.822);
         display: flex;justify-content: space-between;
         z-index: 10;
         //封面唱片
@@ -152,11 +152,11 @@
             i{
                 width: 40px;height: 40px;
                 display: flex;align-items: center;justify-content: center;
-                font-size: 26px;color: #0decfc;
+                font-size: 26px;color: #cedbf7;
                 cursor: pointer;
                 transition: all 0.2s;
                 &:hover{
-                    border-radius:6px;background-color: rgba(71,70,70,0.2);color:#fff;
+                    border-radius:6px;background-color: #cedbf7;color:#fff;
                 }
             }
             .i-big{
@@ -227,7 +227,7 @@
                 
             }
             .playing{
-                color: aquamarine;
+                color: #cccaca;
             }
         }
     }

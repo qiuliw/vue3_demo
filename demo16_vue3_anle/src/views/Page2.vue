@@ -1,24 +1,24 @@
 <template>
     <div class="shell">
         <div class="box">
-            <img src="../../public/imgs/a-1.jpg">
-            <span>棒打香橙</span>
+            <img src="../../public/imgs/a-1.jpeg">
+            <span>外公</span>
         </div>
         <div class="box">
-            <img src="../../public/imgs/a-2.jpg">
-            <span>芋圆葡萄</span>
+            <img src="../../public/imgs/a-2.jpeg">
+            <span>母亲</span>
         </div>
         <div class="box">
-            <img src="../../public/imgs/a-3.jpg">
-            <span>草莓伯伯</span>
+            <img src="../../public/imgs/a-3.jpeg">
+            <span>弟弟</span>
         </div>
         <div class="box">
-            <img src="../../public/imgs/a-1.jpg">
-            <span>香橙棒打</span>
+            <img src="../../public/imgs/a-4.jpeg">
+            <span>爷爷</span>
         </div>
         <div class="box">
-            <img src="../../public/imgs/a-2.jpg">
-            <span>葡萄余元</span>
+            <img src="../../public/imgs/a-5.jpeg">
+            <span>xxx</span>
         </div>
     </div>
 </template>
@@ -49,7 +49,7 @@ body{
     overflow: hidden;
     transition: .5s;
     margin:0 20px;
-    box-shadow:0px 20px 20px rgba(8, 182, 212, 0.822);
+    box-shadow:0px 20px 20px rgba(181, 199, 203, 0.822);
     border-radius: 20px;
     border:10px solid #fff;
     background-color: #fff;
