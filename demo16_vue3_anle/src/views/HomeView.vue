@@ -7,7 +7,7 @@
         <n-button @click="toggleTheme">深色</n-button>
       </n-layout-header>
       <n-layout-content content-style="padding: 24px;">
-        平山道
+        <XiangTable/>
       </n-layout-content>
     </n-layout>
   </n-config-provider>
@@ -16,6 +16,7 @@
 <script setup>
 import { ref } from 'vue';
 import { darkTheme, lightTheme } from 'naive-ui';
+import XiangTable from '@/components/XiangTable.vue';
 
 // 定义当前主题的响应式状态，默认为 lightTheme
 const currentTheme = ref(null);
@@ -33,7 +34,11 @@ function toggleTheme() {
 }
 
 .n-layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   height: 64px;
+  padding: 3em;
 }
 
 .n-layout-footer {

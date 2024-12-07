@@ -91,7 +91,7 @@ const columns = [
 </script>
 
 <template>
-    <NSpace vertical :size="12">
+    <NSpace vertical :size="12" style="max-width: 1080px;margin: auto;">
         <!-- 添加商品按钮 -->
         <NButton @click="createModalVisible = true">添加商品</NButton>
 
@@ -115,6 +115,9 @@ const columns = [
         </NModal>
 
         <!-- 商品列表 -->
-        <NDataTable :columns="columns" :data="products" :pagination="{ pageSize: 10 }" />
+        <NDataTable :columns="columns" :data="products" :pagination="{ pageSize: 6 }" />
     </NSpace>
 </template>
+
+
+
