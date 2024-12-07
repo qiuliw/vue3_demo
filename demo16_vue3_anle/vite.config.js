@@ -5,6 +5,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
 import Components from 'unplugin-vue-components/vite';
 import { fileURLToPath, URL } from 'node:url';
+import legacy from '@vitejs/plugin-legacy';
 
 // vite.config.ts
 export default defineConfig({
@@ -23,6 +24,9 @@ export default defineConfig({
         }
       ]
     }),
+    legacy({
+      targets:["defaults","not IE 11"],
+    }),
     Components({
       resolvers: [NaiveUiResolver()]
     })
@@ -31,5 +35,6 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  }
+  },
+  base: './'
 });

@@ -19,6 +19,7 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@vitejs/plugin-legacy": "^6.0.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "less": "^4.2.1",
     "naive-ui": "^2.40.2",
