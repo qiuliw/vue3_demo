@@ -23,7 +23,6 @@
     <swiper-slide><Page3/></swiper-slide>
     <swiper-slide><Page4/></swiper-slide>
     <swiper-slide><Page5/></swiper-slide>
-    <swiper-slide><Page6/></swiper-slide>
   </swiper>
 
   
@@ -34,7 +33,6 @@ import Page2 from "./Page2.vue";
 import Page3 from "./Page3.vue";
 import Page4 from "./Page4.vue";
 import Page5 from "./Page5.vue";
-import Page6 from "./Page6.vue";
 import Nav from "../components/Nav.vue"
 import Return from "../components/Return.vue";
 

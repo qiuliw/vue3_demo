@@ -12,7 +12,9 @@
         </div>
         <div class="buy-car">
             <div class="fa fa-shopping-cart i-car"/>
-            <span @click="buyXiang">买香</span>
+            <router-link to="/buy"
+            style="margin: 0 10px;color: pink;"
+            >买香</router-link>
         </div>
     </div>
 </template>
@@ -48,10 +50,7 @@ function goTo(index){
     emits('slideToMiddle',index)
 }
 
-// 买香
-const buyXiang =()=>{
-    msg.error("你的余额不足，请充值后购买");
-}
+
 
 </script>
 

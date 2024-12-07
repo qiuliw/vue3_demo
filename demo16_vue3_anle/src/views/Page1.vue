@@ -14,7 +14,7 @@
                         <span class="current-time">{{currentTimeStr}}</span>
                         <div class="time">{{totalTimeStr}}</div>
                     </div>
-                    <div class="music_progress_bar" ref="progressBar" @click="progressClick()">
+                    <div class="music_progress_bar" ref="progressBar" @click="progressClick">
                         <div class="music_progress_line" ref="lineDom"></div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                     display: flex;justify-content: space-between;color: #f2789b;line-height: 20px;
                 }
                 .music_progress_bar{
-                    width: 100%;height: 3px;background-color: #cccaca;border-radius: 10px;margin-top: 3px;
+                    width: 100%;height: 5px;background-color: #cccaca;border-radius: 10px;margin-top: 3px;
 
                     .music_progress_line{
                         width: 0%;
@@ -454,10 +454,15 @@ const closeMusicList=()=>{
 const progressBar=ref();
 // 点击进度条
 const progressClick=(e)=>{
+
+
+
     const rect =progressBar.value.getBoundingClientRect();
-    let persent = (e.domEvent.pageX - rect.left)/rect.width;
-    lineDom.value.style='width:'+persent+"%";
-    audio.value.currentTime = persent * totalTime /100;
+
+
+    let persent = (e.clientX - rect.left)/rect.width *100;
     console.log(persent);
+    lineDom.value.style='width:'+persent+"%";
+    audio.value.currentTime = persent * audio.value.duration /100;
 }
 </script>
