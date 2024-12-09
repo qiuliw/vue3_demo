@@ -28,7 +28,7 @@ import { useMessage } from "naive-ui";
 const msg = useMessage();
 
 // 导航栏内容
-const tabNameList=ref(["安魂曲","昨日之亲","列祖列宗","家族轶事","入住"]);
+const tabNameList=ref(["安魂曲","昨日之亲","列祖列宗","香火鼎盛","入住"]);
 
 //-------导航栏随动-----------
 const tabCurrentList=ref(['current']);// li的current样式数组

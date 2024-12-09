@@ -9,4 +9,8 @@
     </style>
     
   </defs>
-  <rect x="0" y="0" width="164" height="65" fill="#ffffff"></rect><g transform="translate(10 10) rotate(0 72 22.5)"><text x="0" y="31.716" font-family="Excalifont, Xiaolai, Segoe UI Emoji" font-size="36px" fill="#1e1e1e" text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">丘の灵堂</text></g></svg>
+  <rect x="0" y="0" width="164" height="65" fill="rgba(255,255,255,0.1)"></rect>
+  <g transform="translate(10 10) rotate(0 72 22.5)">
+    <text x="0" y="31.716" font-family="Excalifont, Xiaolai, Segoe UI Emoji" font-size="36px" fill="#ffffff" text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="alphabetic">丘の灵堂</text>
+  </g>
+</svg>

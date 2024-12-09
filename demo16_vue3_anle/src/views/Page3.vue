@@ -23,20 +23,23 @@
             <div class="shun">
                 <span>墓地风景直播 >></span>
             </div>
-            <div class="new">
-                <div class="title">
-                    <span class="left">上香动态</span>
-                    <span class="right">更多</span>
-                </div>
-                <ul>
-                    <li v-for="item in newLsit">{{ item }}</li>
-                </ul>
-            </div>
+            <NCard 
+                title="最近上香动态" 
+                style="height: 250px;overflow: hidden;
+                border-radius: 8px;
+                background-color: rgba(255, 255, 255, 0.6);
+                "
+                hoverable
+                size="small"
+                >
+                <UpData/>
+            </NCard>
         </div>
     </div>
 </template>
 
 <script setup>
+import UpData from '@/components/UpData.vue';
 import { useMessage } from 'naive-ui'
 
 const upImgList=['./imgs/a-1.jpeg','./imgs/a-2.jpeg','./imgs/a-3.jpeg']
