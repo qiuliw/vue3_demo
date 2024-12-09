@@ -11,11 +11,11 @@
         李二
       </n-gradient-text>
     </NSpace>
-    <NSpace>
+    <!-- <NSpace>
       <NMarqueue auto-fill>
         <n-image width="200" height="200" src="../../public/imgs/a-4.jpeg" style="margin-right: 24px" />
       </NMarqueue>
-    </NSpace>
+    </NSpace> -->
   </div>
 </template>
 
