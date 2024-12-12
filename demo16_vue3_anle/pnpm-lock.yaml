@@ -14,6 +14,9 @@ importers:
       axios:
         specifier: ^1.7.9
         version: 1.7.9
+      compass:
+        specifier: ^0.1.1
+        version: 0.1.1
       pinia:
         specifier: ^2.2.6
         version: 2.2.8(vue@3.5.13)
@@ -1157,6 +1160,9 @@ packages:
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
+
+  compass@0.1.1:
+    resolution: {integrity: sha512-9z+RjcAGig6/9uAFeCbWajTvrye1u61ca5QrqN6JTrHRYOOgAKs33Xv/3/fODYthxWC2C97AE0e45PLETNRicg==}
 
   confbox@0.1.8:
     resolution: {integrity: sha512-RMtmw0iFkeR4YV+fUOSucriAQNb9g8zFR52MWCtl+cCZOFRNL6zeB395vPzFhEjjn4fMxXudmELnl/KF/WrK6w==}
@@ -3307,6 +3313,8 @@ snapshots:
       delayed-stream: 1.0.0
 
   commander@2.20.3: {}
+
+  compass@0.1.1: {}
 
   confbox@0.1.8: {}
 

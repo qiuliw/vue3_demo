@@ -27,3 +27,11 @@ pnpm dev
 ```sh
 pnpm build
 ```
+
+### 技术栈
+
+- vue3
+- vue-router
+- pinia
+- naive-ui
+- swiper

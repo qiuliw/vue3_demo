@@ -25,7 +25,7 @@
     <swiper-slide><Page5/></swiper-slide>
   </swiper>
 
-  
+  <Bg/>
 </template>
 <script setup>
 import Page1 from "./Page1.vue";
@@ -62,11 +62,11 @@ const goTo=(index)=>{
 </script>
 
 <style lang="less">
-body{
-background-image: linear-gradient(0deg,
-        rgb(105, 105, 105) 23.8%,
-        #292929);
-}
+// body{
+// background-image: linear-gradient(0deg,
+//         rgb(105, 105, 105) 23.8%,
+//         #292929);
+// }
 
 // swiper
 .swiper {

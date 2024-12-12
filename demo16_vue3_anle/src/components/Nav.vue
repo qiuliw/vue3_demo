@@ -68,7 +68,7 @@ function goTo(index){
     position: fixed;z-index: 2;width:100%;height: 3rem;
     display: flex;align-items: center;
     // border-bottom: white solid 1px;
-    background-color: #303030;
+    background-color: transparent;
     // log
     .log{
         height: 100%;
