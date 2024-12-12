@@ -1,6 +1,6 @@
 <template>
     <div class="nav">
-        <div class="log">
+        <div class="log" @click="goT">
             <img src=".././assets/lt.svg" alt="" srcset="">
         </div>
         <ul>
@@ -24,8 +24,14 @@
 import {ref} from "vue";
 import { defineProps,watch } from 'vue';
 import { useMessage } from "naive-ui";
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const msg = useMessage();
+
+const goT = ()=>{
+    router.push('/login');
+}
 
 // 导航栏内容
 const tabNameList=ref(["安魂曲","昨日之亲","列祖列宗","香火鼎盛","入住"]);
