@@ -15,9 +15,13 @@ import { NSpace } from 'naive-ui';
                 <NInput placeholder="请输入密码" />
             </NFormItem>
 
-            <div style="display: flex;width: 100%;justify-content: space-between;padding: 0">
-                <RouterLink to="/home">
-                    <NButton type="primary" style="width: 90px;">登录</NButton>
+            <div style="
+            display: flex;width: 100%;
+            justify-content: center;
+            padding: 0"
+            >
+            <RouterLink to="/home">
+                    <NButton type="primary" style="width: 250px;" >登录</NButton>
                 </RouterLink>
             </div>
 

@@ -1,24 +1,39 @@
 <template>
-  <div style="display: flex;
-  max-width: 800px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  ">
-
-    <NSpace>
+  <div style="display: flex;flex-direction: column;">
+    <div style="display: flex;justify-content: center;">
       <n-gradient-text :size="50" type="success">
-        李二
+        今日香王
       </n-gradient-text>
-    </NSpace>
-    <!-- <NSpace>
-      <NMarqueue auto-fill>
-        <n-image width="200" height="200" src="../../public/imgs/a-4.jpeg" style="margin-right: 24px" />
-      </NMarqueue>
-    </NSpace> -->
+
+    </div>
+    <n-card @Click="handleClick"  title="邱xx" :bordered="false" hoverable>
+      <template #cover>
+        <img class="img" src="../../public/imgs/a-1.jpeg">
+      </template>
+      2024/12/12死于xx癌<br /><br />
+      <n-statistic label="今日有" tabular-nums>
+        <n-number-animation ref="numberAnimationInstRef" :from="0" :to="12039" />
+        <template #suffix>
+          位后代为其上香
+        </template>
+      </n-statistic>
+    </n-card>
   </div>
+
 </template>
 
+<style scoped>
+.n-card {
+  max-width: 300px;
+  max-height: 400px;
+}
+</style>
+
 <script setup>
-import { NMarqueue, NSpace } from 'naive-ui';
+
+const numberAnimationInstRef = ref(null);
+function handleClick() {
+  numberAnimationInstRef.value?.play()
+}
+
 </script>
