@@ -34,8 +34,8 @@ import { darkTheme, lightTheme } from 'naive-ui';
 import XiangTable from '@/components/XiangTable.vue';
 
 // 定义当前主题的响应式状态，默认为 lightTheme
-const currentTheme = ref(null);
-const currentThemeStr = ref('深色');
+const currentTheme = ref(darkTheme);
+const currentThemeStr = ref('浅色');
 // 定义一个方法来切换主题
 function toggleTheme() {
   // 如果当前是 lightTheme，则切换到 darkTheme，反之亦然

@@ -9,11 +9,11 @@
     z-index: 99;
     position:fixed; bottom:0px; right:0px;
     height: 30px;width: 30px;
-    background-color: pink;
+    background-color: transparent;
     border-radius: 50% 0 0 0;
     display: flex;justify-content: center;align-items: center;
     transition: all 0.2s ease;
-    color: white;
+    color: rgb(85, 109, 171);
     &:hover{
         cursor: pointer;
         width: 50px;height: 50px;

@@ -6,11 +6,13 @@
       </n-gradient-text>
 
     </div>
-    <n-card @Click="handleClick"  title="邱xx" :bordered="false" hoverable>
+    <n-card @Click="handleClick"  title="李芳" :bordered="false" hoverable>
       <template #cover>
         <img class="img" src="../../public/imgs/a-1.jpeg">
       </template>
-      2024/12/12死于xx癌<br /><br />
+      李芳，慈爱母亲，以家庭为荣，温暖如春日阳光。2024年安详离世，享年76岁，爱永留心间。
+      
+      <br />
       <n-statistic label="今日有" tabular-nums>
         <n-number-animation ref="numberAnimationInstRef" :from="0" :to="12039" />
         <template #suffix>

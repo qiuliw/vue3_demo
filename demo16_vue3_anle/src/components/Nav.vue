@@ -11,10 +11,15 @@
             <div class="fa fa-search i-search"/>
         </div>
         <div class="buy-car">
-            <div class="fa fa-shopping-cart i-car"/>
-            <router-link to="/buy"
-            style="margin: 0 10px;color: pink;"
-            >买香</router-link>
+            
+            <RouterLink to="/buy">
+              <n-button quaternary>
+                <div class="fa fa-shopping-cart i-car" style="color: cadetblue;"/>
+                <n-gradient-text type="info" size="22">
+                去买香
+                </n-gradient-text></n-button>
+
+            </RouterLink>
         </div>
     </div>
 </template>
@@ -140,14 +145,16 @@ function goTo(index){
     .buy-car{
         margin-right: 20px;
         cursor:pointer;
-        color: rgb(241, 96, 120);
+        color: rgb(53, 65, 135);
         span{
             margin-left: 10px;
             font-size: 1.1rem;
         }
     }
 }
-
+.buyText{
+    color:#929292
+}
 
 
 </style>

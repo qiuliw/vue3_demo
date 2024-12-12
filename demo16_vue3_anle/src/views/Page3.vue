@@ -75,14 +75,15 @@ const upXiang = ()=>{
             // background-color: red;
             .some{
                 flex:1;
-                margin: 5px 30px;
-                border: 8px solid white;
-                border-radius:20px;
+                margin: 20px 40px;
+                
+                border-radius:10px;
                 overflow: hidden;
                 position: relative;
                 transition: all 0.3s ease;
                 img{
                     transition: all 0.3s ease;
+                    width: 100%;
                     height: 100%;
                     
                 }
