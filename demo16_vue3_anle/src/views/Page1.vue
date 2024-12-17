@@ -50,7 +50,7 @@
                 <n-list-item @click="modalPlay(index)" :class="playing[index]" v-for="(item, index) in musicList">
                     <n-thing>
                         <div style="display: flex;justify-content: space-between;width: 100%;">
-                            <span>{{ item.name }}</span>
+                            <span>{{ item.name }}  &nbsp; -  &nbsp; {{ item.singer }} </span>
                             <span :class="['fa', 'icon', 'fa-play-circle', modalIconClass[index]]" style="font-size: 20px;color: gray;"></span>
                         </div>
                     </n-thing>
@@ -340,6 +340,13 @@ var musicList = [
         "singer": "陈奕迅",
         "album": "认了吧",
         "cover": "./imgs/4.jpg"
+    },
+    {
+        "name": "火葬场之歌",
+        "audio_url": "./audios/火葬场之歌.mp3",
+        "singer": "钨丝,梦魇",
+        "album": "死有分",
+        "cover": "./imgs/5.jpg"
     }
 ];
 // 当前播放哪一首歌曲
@@ -483,8 +490,10 @@ onMounted(() => {
     //     render(musicList[currentIndex.value]);
     // })
     render(musicList[currentIndex.value]);
-
-
+    audio.value.ondurationchange = () => {
+        playMusicOther();
+        audio.value.play();
+    }
 })
 
 

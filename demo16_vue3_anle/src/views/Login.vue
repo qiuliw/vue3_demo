@@ -1,6 +1,21 @@
 <script setup lang="ts">
 import LoginForm from '@/components/LoginForm.vue';
 import { NCard, NSpace } from 'naive-ui';
+import { ref,onMounted,onBeforeUnmount } from 'vue'
+const audio = ref();
+onMounted(()=>{
+    audio.value.play();
+})
+onBeforeUnmount(()=>{
+    audio.value.pause();
+})
+
+const play = ()=>{
+    audio.value.play();
+}
+const pause = ()=>{
+    audio.value.pause();
+}
 </script>
 
 <template>
@@ -211,7 +226,11 @@ import { NCard, NSpace } from 'naive-ui';
         </NSpace>
 
     </div>
+
+    <audio ref="audio" src="../../public/audios/安魂曲.mp3"></audio>
 </template>
+
+
 
 <style lang="scss" scoped>
 .wrap {

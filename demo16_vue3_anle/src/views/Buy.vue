@@ -4,7 +4,7 @@
     <n-layout class="home">
       <n-layout-header bordered>
         <div style="display: flex; justify-content: space-between;width: 100vw;">
-          <div style="display: flex;">
+          <div style="display: flex;align-items: center;">
             <RouterLink to="/home">
               <n-button quaternary><n-gradient-text type="danger" size="20">
                   去灵堂
@@ -12,7 +12,12 @@
 
             </RouterLink>
           </div>
-          <div style="display: flex;">
+          <div style="display: flex;justify-content: center;align-items: center;">
+            <n-gradient-text type="info" size="30">
+              香品管理
+            </n-gradient-text>
+          </div>
+          <div style="display: flex;align-items: center;">
             <n-button @click="toggleTheme" quaternary>{{currentThemeStr}}</n-button>
           </div>
 
