@@ -35,7 +35,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(243,230,241);
+    background-color: rgb(163, 163, 163);
 }
 .shell{
     width:90%;
@@ -51,8 +51,8 @@ body{
     margin:0 20px;
     box-shadow:0px 20px 20px rgba(181, 199, 203, 0.822);
     border-radius: 20px;
-    border:10px solid #fff;
-    background-color: #fff;
+    border:10px solid #dadada;
+    background-color: #dadada;
 }
 .box>img{
     width: 200%;

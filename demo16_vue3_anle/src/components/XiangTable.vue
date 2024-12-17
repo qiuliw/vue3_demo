@@ -6,15 +6,15 @@ import { NButton, NDataTable, NModal, NForm, NFormItem, NInput, NSpace, NTag, us
 
 // 商品列表
 const products = ref([
-    { id: 11, name: '宙斯之火', description: 'LED灯使用太阳能充电，夜晚自动亮起，同时有太阳属性加成，为墓地提供守护，防止邪灵侵扰。', price: '998元/盏' },
-    { id: 14, name: '记忆之烛', description: '点燃后可增强墓地的历史感，为过往的灵魂提供指引。', price: '25元/支' },
-    { id: 101, name: '金色回忆',description: '墓前的小金桔树，象征墓主生前的尊贵',price: '19998元/棵'},
+    { id: 11, name: '宙斯之火🔥', description: 'LED灯使用太阳能充电，夜晚自动亮起，同时有太阳属性加成，为墓地提供守护，防止邪灵侵扰。', price: '998元/盏' },
+    { id: 14, name: '记忆之烛🕯️', description: '点燃后可增强墓地的历史感，为过往的灵魂提供指引。', price: '25元/支' },
+    { id: 101, name: '金色回忆🌲',description: '墓前的小金桔树，象征墓主生前的尊贵',price: '19998元/棵'},
     { id: 1, name: '灵魂之树', description: '象征生命的永恒，为墓地带来生机与安宁。', price: '120元/棵' },
     { id: 18, name: '守护之树', description: '种植于墓地旁，具有守护墓地，防止邪灵侵扰的神秘力量。', price: '150元/棵' },
-    { id: 12, name: '守护石狮', description: '具有守护之力，可增强墓地的防御力，抵御邪灵侵扰。', price: '200元/对' },
+    { id: 12, name: '守护石狮🐶', description: '具有守护之力，可增强墓地的防御力，抵御邪灵侵扰。', price: '200元/对' },
     { id: 2, name: '守护石碑', description: '刻有保护符文，能够为墓地提供额外的保护。', price: '300元/块' },
-    { id: 3, name: '安宁之花', description: '具有安抚灵魂的效果，使墓地周围环境更加宁静。', price: '50元/束' },
-    { id: 4, name: '岁月之灯', description: '长明不熄，为墓地提供永恒的光明。', price: '80元/盏' },
+    { id: 3, name: '安宁之花🪷', description: '具有安抚灵魂的效果，使墓地周围环境更加宁静。', price: '50元/束' },
+    { id: 4, name: '岁月之灯💡', description: '长明不熄，为墓地提供永恒的光明。', price: '80元/盏' },
     { id: 5, name: '静谧之水', description: '象征生命的源泉，为墓地带来清新与平静。', price: '200元/池' },
     { id: 6, name: '守护之链', description: '环绕墓地，具有防止邪灵侵扰的神秘力量。', price: '150元/条' },
     { id: 7, name: '岁月之门', description: '象征时间的流转，为墓地带来历史的厚重感。', price: '400元/扇' },
