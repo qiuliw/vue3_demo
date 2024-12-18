@@ -247,12 +247,26 @@ const pause = ()=>{
     @return $random_range;
 }
 
+
+
 .form {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 140px;
     transform: translate(-50%, -50%);
+
+}
+
+@media (max-width:800px) {
+    .form {
+        background-color: rgba(95, 126, 156,0.2);
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
 }
 

@@ -156,5 +156,19 @@ function goTo(index){
     color:#929292
 }
 
-
+@media (max-width:800px) {
+    .seach{
+        display: none;
+        .n-input{
+            display: none;
+        }
+        .i-search{
+            display: none;
+        }
+    }
+    .buy-car{
+        display: none;
+    }
+    
+}
 </style>
