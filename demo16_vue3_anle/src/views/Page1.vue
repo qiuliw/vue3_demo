@@ -121,6 +121,7 @@
                     margin-top: 3px;
 
                     .music_progress_line {
+                        position: relative;
                         width: 0%;
                         height: 100%;
                         background-color: #f2709b;
@@ -473,10 +474,10 @@ const format = (s) => {
 // 进度条对象
 const lineDom = ref();
 
-// 歌曲播放时触发的事件
+// 歌曲播放时触发的事件,自动更新进度条
 const updateTime = (e) => {
-    currentTimeStr.value = format(e.target.currentTime);
-    let persent = e.target.currentTime / totalTime.value * 100;
+    currentTimeStr.value = format(audio.value.currentTime);
+    let persent = audio.value.currentTime /  audio.value.duration * 100;
     lineDom.value.style = "width:" + persent + "%";
 }
 // 歌曲播放结束
@@ -522,19 +523,15 @@ const closeMusicList = () => {
     modalDom.value.style = 'display:none';
 }
 
-
 const progressBar = ref();
 // 点击进度条
 const progressClick = (e) => {
 
-
-
     const rect = progressBar.value.getBoundingClientRect();
 
+    let persent = Math.floor(e.clientX - rect.left) / rect.width * 100;
 
-    let persent = (e.clientX - rect.left) / rect.width * 100;
-    console.log(persent);
-    lineDom.value.style = 'width:' + persent + "%";
     audio.value.currentTime = persent * audio.value.duration / 100;
+
 }
 </script>

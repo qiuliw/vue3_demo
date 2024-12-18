@@ -35,3 +35,11 @@ pnpm build
 - pinia
 - naive-ui
 - swiper
+
+
+### 已知bug
+
+~~音乐进度条多次切换后可能无法正确渲染长度
+views/page1.vue - 537行~~
+>已修复，是使用e.target获取的音乐dom，可能获取的不是响应式更新的dom，一直使用的老dom第一首歌曲更新进度条。
+>改用vue提供的ref api引用音乐dom后恢复正常
