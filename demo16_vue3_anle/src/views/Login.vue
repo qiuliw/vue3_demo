@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Holder from '@/components/Holder.vue';
 import LoginForm from '@/components/LoginForm.vue';
 import { NCard, NSpace } from 'naive-ui';
 import { ref, onMounted, onBeforeUnmount } from 'vue'
@@ -223,6 +224,7 @@ const pause = () => {
 
         <NSpace>
             <LoginForm class="form" />
+            
         </NSpace>
 
     </div>

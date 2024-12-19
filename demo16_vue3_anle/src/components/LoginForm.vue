@@ -6,6 +6,7 @@ import { NSpace } from 'naive-ui';
     <NCard style="min-width: 400px;">
         <div class="log">
             <img src=".././assets/lt-b.svg" alt="" srcset="" class="lt">
+            <Holder style="transform: scale(0.18);position: absolute;"/>
         </div>
         <NForm ref="createFormRef">
             <NFormItem label="用户名" path="name" class="item">
