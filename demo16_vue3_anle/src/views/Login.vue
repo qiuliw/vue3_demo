@@ -315,7 +315,7 @@ const pause = () => {
             }
 
             to {
-                transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
+                transform: translate($random-x-end-yoyo, 100vh) scale($random-scale) rotate($random-rotate);
             }
         }
 
