@@ -285,9 +285,9 @@ const pause = () => {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 50%; // 与父元素相同
-        height: 50%; // 与父元素相同
-        border: 6px solid white;
+        width: 60%; // 与父元素相同
+        height: 60%; // 与父元素相同
+        border: 5px solid white;
         transform: translate(-50%, -50%); // 定位到中心并缩小到一半大小
     }
 
