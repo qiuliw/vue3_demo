@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import LoginForm from '@/components/LoginForm.vue';
 import { NCard, NSpace } from 'naive-ui';
-import { ref,onMounted,onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 const audio = ref();
-onMounted(()=>{
+onMounted(() => {
     audio.value.play();
 })
-onBeforeUnmount(()=>{
+onBeforeUnmount(() => {
     audio.value.pause();
 })
 
-const play = ()=>{
+const play = () => {
     audio.value.play();
 }
-const pause = ()=>{
+const pause = () => {
     audio.value.pause();
 }
 </script>
@@ -222,7 +222,7 @@ const pause = ()=>{
         <div class="snow"></div>
 
         <NSpace>
-            <LoginForm class="form"/>
+            <LoginForm class="form" />
         </NSpace>
 
     </div>
@@ -260,7 +260,7 @@ const pause = ()=>{
 
 @media (max-width:800px) {
     .form {
-        background-color: rgba(95, 126, 156,0.2);
+        background-color: rgba(95, 126, 156, 0.2);
         position: absolute;
         color: white;
         top: 50%;
@@ -273,10 +273,23 @@ const pause = ()=>{
 .snow {
     $total: 200;
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background: white;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    border: 6px solid white; // 创建白色圆环
+    box-sizing: border-box; // 确保border包含在宽度和高度内
+
+    // 铜钱中间透明效果
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50%; // 与父元素相同
+        height: 50%; // 与父元素相同
+        border: 6px solid white;
+        transform: translate(-50%, -50%); // 定位到中心并缩小到一半大小
+    }
 
     @for $i from 1 through $total {
         $random-x: random(1000000) * 0.0001vw;
@@ -288,10 +301,11 @@ const pause = ()=>{
         $random-scale: random(10000) * 0.0001;
         $fall-duration: random_range(10, 30) * 1s;
         $fall-delay: random(30) * -1s;
+        $random-rotate: random(360) * 1deg;
 
         &:nth-child(#{$i}) {
             opacity: random(10000) * 0.0001;
-            transform: translate($random-x, -10px) scale($random-scale);
+            transform: translate($random-x, -40px) scale($random-scale) rotate($random-rotate);
             animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
         }
 
@@ -304,6 +318,8 @@ const pause = ()=>{
                 transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
             }
         }
+
+
     }
 }
 </style>
