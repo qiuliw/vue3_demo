@@ -304,23 +304,27 @@ const pause = () => {
         $fall-duration: random_range(10, 30) * 1s;
         $fall-delay: random(30) * -1s;
         $random-rotate: random(360) * 1deg;
+        $random-scale1: $random-scale * random(10000) * 0.0001;
+        $random-scale2: $random-scale * random(8000) * 0.0001 + 0.2;
+        $random-scale3: $random-scale * random(8000) * 0.0001 + 0.2;
+        $random-scalex: $random-scale * random(8000) * 0.0001 + 0.2;
+
 
         &:nth-child(#{$i}) {
             opacity: random(10000) * 0.0001;
-            transform: translate($random-x, -40px) scale($random-scale) rotate($random-rotate);
+            transform: translate($random-x, -40px) scale($random-scale,$random-scale1);
             animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
         }
 
         @keyframes fall-#{$i} {
             #{percentage($random-yoyo-time)} {
-                transform: translate($random-x-end, $random-yoyo-y) scale($random-scale);
+                transform: translate($random-x-end, $random-yoyo-y) scale(1,$random-scale2) rotate($random-rotate);
             }
 
             to {
-                transform: translate($random-x-end-yoyo, 100vh) scale($random-scale) rotate($random-rotate);
+                transform: translate($random-x-end-yoyo, 100vh) scale(1,$random-scale3) rotate($random-rotate + 180deg);
             }
         }
-
 
     }
 }
