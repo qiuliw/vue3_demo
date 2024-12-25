@@ -10,7 +10,7 @@
         </span>
       </div>
       <div style="display: flex;justify-content: center;">
-        <n-card @Click="handleClick" title="李芳" :bordered="false" hoverable>
+        <n-card class="box" @Click="handleClick" title="李芳" :bordered="false" hoverable>
           <template #cover>
             <img class="img" src="../../public/imgs/a-1.jpeg">
           </template>
@@ -54,6 +54,8 @@
     display: none;
   }
 }
+
+
 </style>
 
 <script setup>

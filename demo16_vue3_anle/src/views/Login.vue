@@ -21,206 +21,7 @@ const pause = () => {
 
 <template>
     <div class="wrap">
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
-        <div class="snow"></div>
+        <div class="snow" v-for="index in 100" :key="index"></div>
 
         <NSpace>
             <LoginForm class="form" />
@@ -273,7 +74,7 @@ const pause = () => {
 }
 
 .snow {
-    $total: 200;
+    $total: 100;
     position: absolute;
     width: 30px;
     height: 30px;
@@ -300,30 +101,29 @@ const pause = () => {
         $random-x-end-yoyo: $random-x + ($random-offset / 2);
         $random-yoyo-time: random_range(30000, 80000) / 100000;
         $random-yoyo-y: $random-yoyo-time * 100vh;
-        $random-scale: random(10000) * 0.0001;
+        $random-scale: random(7000) * 0.0001 + 0.9;
         $fall-duration: random_range(10, 30) * 1s;
         $fall-delay: random(30) * -1s;
         $random-rotate: random(360) * 1deg;
-        $random-scale1: $random-scale * random(10000) * 0.0001;
-        $random-scale2: $random-scale * random(8000) * 0.0001 + 0.2;
-        $random-scale3: $random-scale * random(8000) * 0.0001 + 0.2;
-        $random-scalex: $random-scale * random(8000) * 0.0001 + 0.2;
+        $random-scale1: $random-scale * random(10000) * 0.0001 ;
+        $random-scale2: $random-scale * random(10000) * 0.0001 ;
+        $random-scale3: $random-scale * random(10000) * 0.0001 ;
 
 
-        &:nth-child(#{$i}) {
-            opacity: random(10000) * 0.0001;
-            transform: translate($random-x, -40px) scale($random-scale,$random-scale1);
-            animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
-        }
+&:nth-child(#{$i}) {
+opacity: random(10000) * 0.0001;
+transform: translate($random-x, -40px) scale($random-scale,$random-scale1);
+animation: fall-#{$i} $fall-duration $fall-delay linear infinite;
+}
 
-        @keyframes fall-#{$i} {
-            #{percentage($random-yoyo-time)} {
-                transform: translate($random-x-end, $random-yoyo-y) scale(1,$random-scale2) rotate($random-rotate);
-            }
+@keyframes fall-#{$i} {
+#{percentage($random-yoyo-time)} {
+    transform: translate($random-x-end, $random-yoyo-y) scale($random-scale,$random-scale2) rotate($random-rotate);
+}
 
-            to {
-                transform: translate($random-x-end-yoyo, 100vh) scale(1,$random-scale3) rotate($random-rotate + 180deg);
-            }
+to {
+    transform: translate($random-x-end-yoyo, 100vh) scale($random-scale,$random-scale3) rotate($random-rotate + 180deg);
+}
         }
 
     }
