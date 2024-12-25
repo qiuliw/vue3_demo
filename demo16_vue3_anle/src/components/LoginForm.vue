@@ -30,10 +30,9 @@ import { NSpace } from 'naive-ui';
     </NCard>
 </template>
 
-<style scoped>
+<style>
 .log{
     display: flex;
     justify-content: center;
 }
-
 </style>

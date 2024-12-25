@@ -58,6 +58,7 @@ const pause = () => {
     left: 50%;
     width: 140px;
     transform: translate(-50%, -50%);
+    filter: grayscale(100%);
 
 }
 
