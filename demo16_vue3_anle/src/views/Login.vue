@@ -30,7 +30,7 @@ const pause = () => {
 
     </div>
 
-    <audio ref="audio" src="../../public/audios/安魂曲.mp3"></audio>
+    <audio ref="audio" src="../../public/audios/王酩 - 出殡 (乐曲).mp3"></audio>
 </template>
 
 
